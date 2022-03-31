@@ -1,0 +1,42 @@
+$primary: #F87C09;
+$primaryLight: #FF922E;
+$primaryDark: #AEAAAA;
+
+$secondary: #EAEAEA;
+$secondaryDark: #6B6B6B;
+
+$black: #000;
+$white: #FFF;
+
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin font($name, $weight) {
+  font: {
+    family: $name;
+    weight: $weight;
+    display: swap;
+  }
+  src: url("../fonts/#{ $name }-#{ $weight }.woff2")  format("woff2"),
+    url("../fonts/#{ $name }-#{ $weight }.woff")  format("woff"),
+}
+

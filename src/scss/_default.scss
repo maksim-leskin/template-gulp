@@ -1,0 +1,98 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 1.3;
+  font-size: 12px;
+  font-weight: 400;
+  color: $white; /*цвет под ваш проект*/
+  background-color: $black; /*цвет под ваш проект*/
+  background-image: url(../img/sprite.svg#fire);
+  background-position: center top 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+
+.container {
+  max-width: 1184px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+@include tablet {
+  body {
+    background-color: red;
+  }
+}
+
+@include laptop {
+  body {
+    background-color: green;
+  }
+}
+
+@include desktop {
+  body {
+    background-color: blue;
+  }
+}
