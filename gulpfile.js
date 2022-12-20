@@ -330,10 +330,10 @@ export const server = () => {
 };
 
 export const clear = (done) => {
-	deleteSync([path.dist.base], {
-		force: true,
-	});
-	done();
+  deleteSync([path.dist.base], {
+    force: true,
+  });
+  done();
 };
 
 const develop = (ready) => {
